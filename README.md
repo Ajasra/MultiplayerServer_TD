@@ -12,6 +12,14 @@ Built with **Express**, **Socket.io**, and **React** (Mantine UI).
 [TouchDesigner - Big Screen]  <──WebSocket──>  [Game Server]  <──WebSocket/REST──>  [Phone Controllers]
 ```
 
+<p align="center">
+  <a href="https://youtu.be/av9VIxu61oQ">
+    <img src="https://img.youtube.com/vi/av9VIxu61oQ/hqdefault.jpg" alt="Watch demo on YouTube" width="480">
+  </a>
+  <br>
+  <a href="https://youtu.be/av9VIxu61oQ">🎥 Watch Demo on YouTube</a>
+</p>
+
 1. **Players** connect via their phone browsers — they get a joystick + buttons to control the game
 2. **The server** manages all game state in memory, batches player inputs, and syncs stats
 3. **TouchDesigner** renders the game on a big screen / LED wall, sending back scores, lives, and game events
