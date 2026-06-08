@@ -1,0 +1,13 @@
+services:
+  app:
+    volumes:
+      - /home/apps/game-server:/usr/src/app
+      - /usr/src/app/node_modules
+      - /var/lib/gameserver-sqlite:/var/lib/gameserver-sqlite
+    environment:
+      NODE_ENV: production
+      PORT: 3031
+      TZ: UTC
+      SQLITE_DB_PATH: /var/lib/gameserver-sqlite/app.db
+    command: npm start
+    restart: unless-stopped

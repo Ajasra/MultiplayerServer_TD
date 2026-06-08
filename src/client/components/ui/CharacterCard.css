@@ -1,0 +1,47 @@
+/* CharacterCard Component Styles */
+
+.characterCard {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 280 / 320;
+  border: 2px solid rgba(255,255,255,0.15);
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 15% auto 10%;
+  background: rgba(255,255,255,0.05);
+}
+
+.characterCard.noFrame {
+  border: none;
+  background: transparent;
+}
+
+.characterCard .characterImage {
+  position: absolute;
+  top: 10%;
+  left: 15%;
+  right: 15%;
+  bottom: 5%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.characterCard .username {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 18px;
+  font-weight: 900;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  z-index: 2;
+  max-width: 120px;
+  text-wrap: nowrap;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}

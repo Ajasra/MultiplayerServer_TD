@@ -1,0 +1,72 @@
+/* UserImageBackground CSS Module */
+
+.container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(30deg, #000000 0%, #1b0035 100%);
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-size: contain;
+  background-position: top 40px center;
+  background-repeat: no-repeat;
+}
+
+.background.hasImage {
+}
+
+.background.fallback {
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+}
+
+.content {
+  position: relative;
+  z-index: 3;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* padding: 1rem; */
+  color: white;
+}
+
+.content.bottom {
+  justify-content: flex-end;
+  top: -1rem;
+}
+
+.content.center {
+  justify-content: center;
+}
+
+.contentInner {
+  max-width: 400px;
+  margin: 0 auto;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  padding: 1.5rem;
+  backdrop-filter: blur(2px);
+}
+
+.contentInner.finalImage {
+  backdrop-filter: blur(20px);
+}
+
+.hiddenImage {
+  display: none;
+}

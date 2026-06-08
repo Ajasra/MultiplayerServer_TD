@@ -1,0 +1,56 @@
+/* Header specific styles */
+
+.header-container {
+  position: relative;
+}
+
+.header-inner {
+  position: relative;
+}
+
+.logo-wrapper {
+  position: relative;
+}
+
+.logo-image {
+  position: fixed;
+  left: 24px;
+  top: 16px; /* top-left area of screen */
+  height: 150px;
+  width: auto;
+  z-index: 100;
+}
+
+/* Reserve space so layout doesn't jump due to absolute logo */
+.logo-spacer {
+  height: 140px;
+}
+
+.desktop-nav-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 8px;
+  z-index: 1;
+  width: 90%;
+  padding-left: 140px;
+}
+
+.mobile-nav-wrapper {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  z-index: 110; /* keep burger on top of centered nav */
+}
+
+/* Mobile adjustments */
+@media (max-width: 48em) {
+  .logo-image {
+    height: 75px; /* half size on mobile */
+    top: 6px;
+    left: 8px;
+  }
+  .logo-spacer {
+    height: 60px;
+  }
+}

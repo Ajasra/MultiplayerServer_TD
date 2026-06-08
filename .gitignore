@@ -1,0 +1,15 @@
+node_modules/*
+.env
+uploads/*
+TDclient/TDclient.*.toe
+TDclient/Client.*
+TDclient/Backup/TDclient.*.toe
+TDclient/Backup/Client.*
+logs/*
+TDclient/data/logs/*
+public/dist/*
+.sqlite-data/app.db
+.sqlite-data/*
+dist/*
+
+logs/*

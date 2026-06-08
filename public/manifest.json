@@ -1,0 +1,9 @@
+{
+  "name": "Game Server",
+  "short_name": "Game",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1a2e",
+  "theme_color": "#6a11cb",
+  "icons": []
+}

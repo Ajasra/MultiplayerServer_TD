@@ -1,0 +1,19 @@
+services:
+  app:
+    container_name: game_server_app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3031:3031"
+      - "3032:3032"
+    restart: unless-stopped
+    environment:
+      NODE_ENV: ${NODE_ENV:-production}
+      PORT: ${PORT:-3031}
+      TZ: ${TZ:-UTC}
+      SQLITE_DB_PATH: ${SQLITE_DB_PATH:-/.sqlite-data/app.db}
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+      - ./.sqlite-data:/.sqlite-data

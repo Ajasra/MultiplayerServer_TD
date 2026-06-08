@@ -1,0 +1,18 @@
+# Build artifacts
+public/dist/
+node_modules/
+coverage/
+
+# Generated files
+*.min.js
+*.min.css
+package-lock.json
+
+# Project specific
+TDclient/
+uploads/
+logs/
+
+# Other
+.git/
+.DS_Store 

@@ -1,0 +1,40 @@
+{
+  "watch": [
+    "src/**/*.js",
+    "server.js",
+    "src/routes/**/*.js",
+    "src/config/**/*.js",
+    "src/db/**/*.js",
+    "src/game/**/*.js",
+    "src/utils/**/*.js",
+    "src/websocket/**/*.js",
+    "src/views/**/*.js"
+  ],
+  "ext": "js,json,yaml,ts",
+  "ignore": [
+    "src/client/**/*",
+    "src/db/models/",
+    "node_modules/",
+    "public/dist/",
+    "coverage/",
+    "logs/",
+    "uploads/",
+    "TDclient/",
+    "docker-compose.yml",
+    "Dockerfile",
+    ".git",
+    "docs/"
+  ],
+  "verbose": true,
+  "delay": "1000ms",
+  "pollingInterval": 500,
+  "env": {
+    "NODE_ENV": "development",
+    "REACT_DEV_SERVER": "http://localhost:3032"
+  },
+  "events": {
+    "start": "echo 'Express server starting...'",
+    "restart": "echo 'Express server restarted due to file changes'",
+    "crash": "echo 'Express server crashed - waiting for file changes before restart'"
+  }
+} 

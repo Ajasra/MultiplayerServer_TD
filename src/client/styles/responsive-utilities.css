@@ -1,0 +1,153 @@
+/* Responsive Design Utilities for Game Server
+ * 
+ * SIMPLE utilities that complement Mantine's responsive system.
+ * Focus: Game-specific responsive needs only.
+ * 
+ * Breakpoints (matching Mantine theme):
+ * - xs: 30em (480px) - Small phones
+ * - sm: 48em (768px) - Large phones / Small tablets  
+ * - md: 64em (1024px) - Tablets / Small desktops
+ * - lg: 74em (1184px) - Desktop
+ * - xl: 90em (1440px) - Large desktop
+ */
+
+/* ===== GAME-SPECIFIC CONTAINERS ===== */
+
+/* Mobile game container - optimized for mobile game UI */
+.container-mobile-game {
+  width: 100%;
+  max-width: 24rem; /* 384px - optimized for mobile game */
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+@media (min-width: 48em) {
+  .container-mobile-game {
+    max-width: 28rem; /* 448px */
+  }
+}
+
+/* ===== RESPONSIVE VISIBILITY (only what we need) ===== */
+
+/* Hide on mobile, show on desktop */
+.hide-mobile {
+  display: none;
+}
+
+@media (min-width: 48em) {
+  .hide-mobile {
+    display: block;
+  }
+}
+
+/* Show on mobile, hide on desktop */
+.show-mobile {
+  display: block;
+}
+
+@media (min-width: 48em) {
+  .show-mobile {
+    display: none;
+  }
+}
+
+/* ===== GAME-SPECIFIC RESPONSIVE UTILITIES ===== */
+
+/* Mobile-friendly touch targets */
+.mobile-touch-target {
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0.75rem 1rem;
+  touch-action: manipulation;
+}
+
+/* Safe area for mobile devices (notch, etc.) */
+.mobile-safe-area {
+  padding-left: max(1rem, env(safe-area-inset-left));
+  padding-right: max(1rem, env(safe-area-inset-right));
+  padding-top: max(1rem, env(safe-area-inset-top));
+  padding-bottom: max(1rem, env(safe-area-inset-bottom));
+}
+
+/* Joystick area - responsive sizing */
+.joystick-area-responsive {
+  width: 200px;
+  height: 200px;
+  max-width: 40vw;
+  max-height: 40vw;
+}
+
+@media (min-width: 48em) {
+  .joystick-area-responsive {
+    width: 250px;
+    height: 250px;
+    max-width: 30vw;
+    max-height: 30vw;
+  }
+}
+
+/* Button groups - responsive layout */
+.button-group-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+@media (min-width: 48em) {
+  .button-group-mobile {
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
+
+/* ===== TEXT RESPONSIVE (minimal) ===== */
+
+/* Text that scales appropriately for mobile vs desktop */
+.text-responsive {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+@media (min-width: 48em) {
+  .text-responsive {
+    font-size: 1.125rem;
+    line-height: 1.6;
+  }
+}
+
+/* ===== LAYOUT UTILITIES ===== */
+
+/* Minimum full screen height */
+.min-h-screen {
+  min-height: 100vh;
+}
+
+/* Responsive flex direction */
+.flex-col-mobile {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 48em) {
+  .flex-col-mobile {
+    flex-direction: row;
+  }
+}
+
+/* ===== ACCESSIBILITY & PERFORMANCE ===== */
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast support */
+@media (prefers-contrast: high) {
+  .mobile-touch-target {
+    border: 2px solid currentColor;
+  }
+}

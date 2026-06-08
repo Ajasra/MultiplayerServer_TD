@@ -1,0 +1,55 @@
+/* Navigation specific styles */
+
+.nav-desktop a,
+.nav-desktop button,
+.nav-mobile a,
+.nav-mobile button {
+  font-family:
+    'Inter',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    sans-serif;
+}
+
+.nav-desktop {
+  padding-left: 140px; /* offset away from overlapping logo */
+}
+
+.nav-desktop a,
+.nav-desktop button,
+.nav-desktop .nav-desktop-link {
+  color: #ffffff;
+  font-size: 1.25rem; /* 20px */
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.nav-desktop .active-link {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 32px;
+  /* padding: 1.25rem; */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.nav-mobile a,
+.nav-mobile button {
+  color: #ffffff;
+}
+
+.nav-mobile.is-active,
+.nav-mobile.is-active:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.nav-mobile .active-link {
+  text-decoration: underline;
+}
+
+.nav-mobile .nav-label {
+  font-size: 1rem; /* 16px */
+}
