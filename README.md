@@ -2,6 +2,8 @@
 
 A real-time multiplayer game server template for creating interactive **big-screen experiences** with [TouchDesigner](https://derivative.ca) visuals and mobile phone controllers.
 
+![Game Server Template](img/gameserver-cover.jpg)
+
 Built with **Express**, **Socket.io**, and **React** (Mantine UI).
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
